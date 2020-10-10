@@ -1,0 +1,11 @@
+spring:
+  application:
+    nickname: seh
+    firstName: H
+    secondName:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+#  spring.mvc.throw-exception-if-no-handler-found=true
+#  spring.resources.add-mappings=false
