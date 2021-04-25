@@ -1,4 +1,4 @@
-package cn.howardliu.demo.springboot.beanpostprocessor.idgenerator.annotation;
+package cn.howardliu.demo.spring.beanpostprocessor.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

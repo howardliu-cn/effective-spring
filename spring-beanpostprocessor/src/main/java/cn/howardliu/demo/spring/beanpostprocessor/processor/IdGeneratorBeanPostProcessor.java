@@ -1,9 +1,8 @@
-package cn.howardliu.demo.springboot.beanpostprocessor.idgenerator.processor;
+package cn.howardliu.demo.spring.beanpostprocessor.processor;
 
-import cn.howardliu.demo.springboot.beanpostprocessor.idgenerator.annotation.IdGeneratorClient;
-import cn.howardliu.demo.springboot.beanpostprocessor.idgenerator.generator.IdGenerator;
-import cn.howardliu.demo.springboot.beanpostprocessor.idgenerator.generator.IdGeneratorFactory;
-import lombok.extern.slf4j.Slf4j;
+import cn.howardliu.demo.spring.beanpostprocessor.annotation.IdGeneratorClient;
+import cn.howardliu.demo.spring.beanpostprocessor.generator.IdGenerator;
+import cn.howardliu.demo.spring.beanpostprocessor.generator.IdGeneratorFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.core.annotation.AnnotationUtils;
@@ -17,12 +16,10 @@ import java.lang.reflect.Field;
  * @since 2021/4/21 下午5:39
  */
 @SuppressWarnings("NullableProblems")
-@Slf4j
 public class IdGeneratorBeanPostProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(final Object bean, final String beanName) throws BeansException {
-        parseFields(bean);
         return bean;
     }
 

@@ -1,6 +1,6 @@
-package cn.howardliu.demo.springboot.beanpostprocessor.idgenerator;
+package cn.howardliu.demo.spring.beanpostprocessor;
 
-import cn.howardliu.demo.springboot.beanpostprocessor.idgenerator.processor.IdGeneratorBeanPostProcessor;
+import cn.howardliu.demo.spring.beanpostprocessor.processor.IdGeneratorBeanPostProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

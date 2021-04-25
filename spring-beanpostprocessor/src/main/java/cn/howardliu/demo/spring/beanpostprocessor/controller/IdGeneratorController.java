@@ -1,7 +1,7 @@
-package cn.howardliu.demo.springboot.beanpostprocessor.idgenerator.controller;
+package cn.howardliu.demo.spring.beanpostprocessor.controller;
 
-import cn.howardliu.demo.springboot.beanpostprocessor.idgenerator.annotation.IdGeneratorClient;
-import cn.howardliu.demo.springboot.beanpostprocessor.idgenerator.generator.IdGenerator;
+import cn.howardliu.demo.spring.beanpostprocessor.annotation.IdGeneratorClient;
+import cn.howardliu.demo.spring.beanpostprocessor.generator.IdGenerator;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

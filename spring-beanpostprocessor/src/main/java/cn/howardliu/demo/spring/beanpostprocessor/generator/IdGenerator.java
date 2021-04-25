@@ -1,4 +1,4 @@
-package cn.howardliu.demo.springboot.beanpostprocessor.idgenerator.generator;
+package cn.howardliu.demo.spring.beanpostprocessor.generator;
 
 /**
  * ID生成器
