@@ -1,4 +1,8 @@
 # effective-spring
 
 - spring-exception-handler: 全局异常优雅响应
+    - [SpringBoot 实战：一招实现结果的优雅响应](https://www.howardliu.cn/springboot-action-gracefully-response/)
+    - [SpringBoot 实战：如何优雅的处理异常](https://www.howardliu.cn/springboot-action-gracefully-response-exception/)
 - spring-beanpostprocessor: 借助BeanPostProcessor实现ID生成器的自动注入
+    - [Spring 实战：通过 BeanPostProcessor 动态注入 ID 生成器](https://www.howardliu.cn/spring-beanpostprocessor/)
+

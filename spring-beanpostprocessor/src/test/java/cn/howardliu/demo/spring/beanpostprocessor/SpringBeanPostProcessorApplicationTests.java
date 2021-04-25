@@ -1,20 +1,21 @@
-package cn.howardliu.demo.springboot.beanpostprocessor;
+package cn.howardliu.demo.spring.beanpostprocessor;
 
-import cn.howardliu.demo.springboot.beanpostprocessor.annotation.IdGeneratorClient;
-import cn.howardliu.demo.springboot.beanpostprocessor.generator.IdGenerator;
+import cn.howardliu.demo.spring.beanpostprocessor.annotation.IdGeneratorClient;
+import cn.howardliu.demo.spring.beanpostprocessor.generator.IdGenerator;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
 
 @SpringBootTest
-public class IdGeneratorTest {
+class SpringBeanPostProcessorApplicationTests {
     @IdGeneratorClient
     private IdGenerator defaultIdGenerator;
 
     @Test
-    public void contextLoads() {
+    void contextLoads() {
         Assert.notNull(defaultIdGenerator, "注入失败");
         System.out.println(defaultIdGenerator.groupName());
         System.out.println(defaultIdGenerator.nextId());
     }
+
 }
