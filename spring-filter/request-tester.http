@@ -1,0 +1,29 @@
+###
+GET http://localhost:8080/index/get?name=howard
+
+<> 2021-04-29T041653.200.txt
+
+###
+POST http://localhost:8080/index/post
+Content-Type: application/json
+
+{"name":"howard"}
+
+<> 2021-04-29T041653.200.json
+
+###
+POST http://localhost:8080/index/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="history.txt"
+Content-Type: multipart/form-data
+</Users/liuxh/history.txt
+--WebAppBoundary--
+
+<> 2021-04-29T041653-1.200.json
+
+###
+GET http://localhost:8080/index/download
+
+<> 2021-04-29T041653-1.200.txt
