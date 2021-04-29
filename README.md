@@ -5,4 +5,5 @@
     - [SpringBoot 实战：如何优雅的处理异常](https://www.howardliu.cn/springboot-action-gracefully-response-exception/)
 - spring-beanpostprocessor: 借助BeanPostProcessor实现ID生成器的自动注入
     - [Spring 实战：通过 BeanPostProcessor 动态注入 ID 生成器](https://www.howardliu.cn/spring-beanpostprocessor/)
-
+- spring-filter: 自定义Filter
+    - [Spring 实战：自定义 Filter 优雅获取请求参数和响应结果](https://www.howardliu.cn/spring-request-recorder/)
