@@ -1,6 +1,8 @@
 package cn.howardliu.effective.spring.enumparam.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,5 +31,11 @@ public class EchoController {
     @GetMapping("gender-id")
     public String genderId(@RequestParam("gender") GenderIdEnum gender) {
         return gender.name();
+    }
+
+    @PostMapping("gender-id-code1")
+    public GenderRequestBody bodyGenderIdCode(@RequestBody GenderRequestBody genderRequest) {
+        genderRequest.setTimestamp(System.currentTimeMillis());
+        return genderRequest;
     }
 }
