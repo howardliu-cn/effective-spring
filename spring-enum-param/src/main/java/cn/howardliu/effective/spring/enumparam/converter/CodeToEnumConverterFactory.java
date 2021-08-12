@@ -20,11 +20,6 @@ public class CodeToEnumConverterFactory implements ConverterFactory<String, Code
     @Override
     public <T extends CodeBaseEnum> Converter<String, T> getConverter(Class<T> targetType) {
         //noinspection unchecked
-        Converter<String, T> converter = CONVERTERS.get(targetType);
-        if (converter == null) {
-            converter = new CodeToEnumConverter<>(targetType);
-            CONVERTERS.put(targetType, converter);
-        }
-        return converter;
+        return CONVERTERS.computeIfAbsent(targetType, key -> new CodeToEnumConverter<>(targetType));
     }
 }

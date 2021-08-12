@@ -20,11 +20,6 @@ public class IdCodeToEnumConverterFactory implements ConverterFactory<String, Id
     @Override
     public <T extends IdCodeBaseEnum> Converter<String, T> getConverter(Class<T> targetType) {
         //noinspection unchecked
-        Converter<String, T> converter = CONVERTERS.get(targetType);
-        if (converter == null) {
-            converter = new IdCodeToEnumConverter<>(targetType);
-            CONVERTERS.put(targetType, converter);
-        }
-        return converter;
+        return CONVERTERS.computeIfAbsent(targetType, key -> new IdCodeToEnumConverter<>(targetType));
     }
 }
