@@ -33,8 +33,20 @@ public class EchoController {
         return gender.name();
     }
 
-    @PostMapping("gender-id-code1")
-    public GenderRequestBody bodyGenderIdCode(@RequestBody GenderRequestBody genderRequest) {
+    @PostMapping("gender-id-code-request-body")
+    public GenderIdCodeRequestBody bodyGenderIdCode(@RequestBody GenderIdCodeRequestBody genderRequest) {
+        genderRequest.setTimestamp(System.currentTimeMillis());
+        return genderRequest;
+    }
+
+    @PostMapping("gender-code-request-body")
+    public GenderCodeRequestBody bodyGenderCode(@RequestBody GenderCodeRequestBody genderRequest) {
+        genderRequest.setTimestamp(System.currentTimeMillis());
+        return genderRequest;
+    }
+
+    @PostMapping("gender-id-request-body")
+    public GenderIdRequestBody bodyGenderIdCode(@RequestBody GenderIdRequestBody genderRequest) {
         genderRequest.setTimestamp(System.currentTimeMillis());
         return genderRequest;
     }

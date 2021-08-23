@@ -8,7 +8,7 @@ import lombok.Data;
  * Created on 2021-08-03
  */
 @Data
-public class GenderRequestBody {
+public class GenderIdCodeRequestBody {
     private String name;
     private GenderIdCodeEnum gender;
     private long timestamp;

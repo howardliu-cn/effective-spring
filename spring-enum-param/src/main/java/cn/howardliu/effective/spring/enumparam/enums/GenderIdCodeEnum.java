@@ -32,28 +32,20 @@ public enum GenderIdCodeEnum implements IdCodeBaseEnum {
     }
 
     @JsonCreator(mode = Mode.DELEGATING)
-    public static GenderIdCodeEnum getItem(String code) {
-        final Integer intCode = adapter(code);
+    public static GenderIdCodeEnum create(Object code) {
+        final String stringCode = code.toString();
+        final Integer intCode = BaseEnum.adapter(stringCode);
         for (GenderIdCodeEnum item : values()) {
-            if (Objects.equals(code, item.name())) {
+            if (Objects.equals(stringCode, item.name())) {
                 return item;
             }
-            if (Objects.equals(item.getCode(), code)) {
+            if (Objects.equals(item.getCode(), stringCode)) {
                 return item;
             }
-
-            if (item.getId().equals(intCode)) {
+            if (Objects.equals(item.getId(), intCode)) {
                 return item;
             }
         }
         return null;
-    }
-
-    private static Integer adapter(String codeStr) {
-        try {
-            return Integer.valueOf(codeStr);
-        } catch (Exception e) {
-            return null;
-        }
     }
 }
