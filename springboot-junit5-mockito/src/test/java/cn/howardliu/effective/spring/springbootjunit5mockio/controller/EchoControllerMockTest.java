@@ -27,7 +27,7 @@ import cn.howardliu.effective.spring.springbootjunit5mockio.service.EchoService;
 @SpringBootTest(classes = SpringbootJunit5MockioApplication.class)
 @ExtendWith(MockitoExtension.class)
 @AutoConfigureMockMvc
-class EchoControllerTest {
+class EchoControllerMockTest {
     @Autowired
     private MockMvc mockMvc;
     @MockBean
