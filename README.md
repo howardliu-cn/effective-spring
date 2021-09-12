@@ -12,3 +12,5 @@
   - [SpringBoot 实战：优雅的使用枚举参数（原理篇）](https://www.howardliu.cn/springboot-enum-params-principle/)
   - [SpringBoot 实战：在 RequestBody 中优雅的使用枚举参数](https://www.howardliu.cn/springboot-action-enum-params-in-requestbody/)
   - [SpringBoot 实战：在 RequestBody 中优雅的使用枚举参数（原理篇）](https://www.howardliu.cn/springboot-enum-params-principle/)
+- springboot-junit5-mockito：集成Junit5、MockMvc、Mockito
+  - [SpringBoot 实战：JUnit5+MockMvc+Mockito 做好单元测试](https://www.howardliu.cn/springboot-action-junit5-mockmvc-mockito/)
