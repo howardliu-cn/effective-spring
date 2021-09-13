@@ -14,3 +14,5 @@
   - [SpringBoot 实战：在 RequestBody 中优雅的使用枚举参数（原理篇）](https://www.howardliu.cn/springboot-enum-params-principle/)
 - springboot-junit5-mockito：集成Junit5、MockMvc、Mockito
   - [SpringBoot 实战：JUnit5+MockMvc+Mockito 做好单元测试](https://www.howardliu.cn/springboot-action-junit5-mockmvc-mockito/)
+- springboot-swagger3 在SpringBoot中集成Swagger3
+  - 更新中
