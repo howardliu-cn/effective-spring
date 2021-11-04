@@ -1,7 +1,18 @@
-package cn.howardliu.demo.spring.seh.exception;
+package cn.howardliu.demo.spring.seh.advice;
 
-import cn.howardliu.demo.spring.seh.pojo.ErrorResponse;
-import lombok.extern.slf4j.Slf4j;
+import static cn.howardliu.demo.spring.seh.exception.CommonResponseEnum.BAD_REQUEST;
+import static cn.howardliu.demo.spring.seh.exception.CommonResponseEnum.INTERNAL_SERVER_ERROR;
+import static cn.howardliu.demo.spring.seh.exception.CommonResponseEnum.METHOD_NOT_ALLOWED;
+import static cn.howardliu.demo.spring.seh.exception.CommonResponseEnum.NOT_ACCEPTABLE;
+import static cn.howardliu.demo.spring.seh.exception.CommonResponseEnum.NOT_FOUND;
+import static cn.howardliu.demo.spring.seh.exception.CommonResponseEnum.SERVICE_UNAVAILABLE;
+import static cn.howardliu.demo.spring.seh.exception.CommonResponseEnum.UNSUPPORTED_MEDIA_TYPE;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+
 import org.springframework.beans.ConversionNotSupportedException;
 import org.springframework.beans.TypeMismatchException;
 import org.springframework.beans.factory.annotation.Value;
@@ -28,12 +39,10 @@ import org.springframework.web.context.request.async.AsyncRequestTimeoutExceptio
 import org.springframework.web.multipart.support.MissingServletRequestPartException;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-
-import static cn.howardliu.demo.spring.seh.exception.CommonResponseEnum.*;
+import cn.howardliu.demo.spring.seh.exception.CodeBaseException;
+import cn.howardliu.demo.spring.seh.exception.ResponseEnum;
+import cn.howardliu.demo.spring.seh.pojo.ErrorResponse;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * <br>created at 2020/8/24

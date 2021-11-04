@@ -1,4 +1,4 @@
-//package cn.howardliu.demo.spring.seh.exception;
+//package cn.howardliu.demo.spring.seh.advice;
 //
 //import cn.howardliu.demo.spring.seh.pojo.ErrorResponse;
 //import lombok.extern.slf4j.Slf4j;
