@@ -14,8 +14,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import cn.howardliu.demo.spring.seh.pojo.Response;
 
 /**
- *
- created at 2020/8/12
+ * created at 2020/8/12
  *
  * @author www.howardliu.cn
  * @since 1.0.0
@@ -23,12 +22,14 @@ import cn.howardliu.demo.spring.seh.pojo.Response;
 @RestControllerAdvice
 public class ResultResponseAdvice implements ResponseBodyAdvice<Object> {
     @Override
-    public boolean supports(final MethodParameter returnType, final Class<? extends HttpMessageConverter<?>> converterType) {
+    public boolean supports(final MethodParameter returnType,
+            final Class<? extends HttpMessageConverter<?>> converterType) {
         return !returnType.getGenericParameterType().equals(Response.class); // 1
     }
 
     @Override
-    public Object beforeBodyWrite(final Object body, final MethodParameter returnType, final MediaType selectedContentType,
+    public Object beforeBodyWrite(final Object body, final MethodParameter returnType,
+            final MediaType selectedContentType,
             final Class<? extends HttpMessageConverter<?>> selectedConverterType,
             final ServerHttpRequest request, final ServerHttpResponse response) {
         if (body == null || body instanceof Response) {
