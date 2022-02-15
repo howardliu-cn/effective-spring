@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * ID生成器工厂类
  *
- * @author liuxinghao
+ * @author 看山 <a href="mailto:howardliu1988@163.com">Howard Liu</a>
  * @version 1.0
  * @since 2021/4/22 下午5:18
  */

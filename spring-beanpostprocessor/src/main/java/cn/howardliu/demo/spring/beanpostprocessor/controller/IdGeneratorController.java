@@ -1,19 +1,20 @@
 package cn.howardliu.demo.spring.beanpostprocessor.controller;
 
-import cn.howardliu.demo.spring.beanpostprocessor.annotation.IdGeneratorClient;
-import cn.howardliu.demo.spring.beanpostprocessor.generator.IdGenerator;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.Map;
+import cn.howardliu.demo.spring.beanpostprocessor.annotation.IdGeneratorClient;
+import cn.howardliu.demo.spring.beanpostprocessor.generator.IdGenerator;
 
 /**
  * ID生成器Controller
  *
- * @author liuxinghao
+ * @author 看山 <a href="mailto:howardliu1988@163.com">Howard Liu</a>
  * @version 1.0
  * @since 2021/4/22 下午5:25
  */

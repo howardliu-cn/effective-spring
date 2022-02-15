@@ -1,18 +1,27 @@
 package cn.howard.demo.springfilter.controller;
 
-import com.google.common.collect.Maps;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
-import javax.servlet.http.HttpServletResponse;
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.google.common.collect.Maps;
+
 /**
- * TODO 描述信息
- *
- * @author liuxinghao
+ * @author 看山 <a href="mailto:howardliu1988@163.com">Howard Liu</a>
  * @version 1.0
  * @since 2021/4/29 下午3:52
  */
