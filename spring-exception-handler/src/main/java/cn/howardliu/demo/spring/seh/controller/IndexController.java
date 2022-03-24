@@ -1,16 +1,18 @@
 package cn.howardliu.demo.spring.seh.controller;
 
-import cn.howardliu.demo.spring.seh.exception.CodeBaseException;
-import cn.howardliu.demo.spring.seh.exception.CommonResponseEnum;
-import cn.howardliu.demo.spring.seh.pojo.Response;
-import cn.howardliu.demo.spring.seh.service.IndexService;
-import lombok.extern.slf4j.Slf4j;
+import static cn.howardliu.demo.spring.seh.exception.CommonResponseEnum.INTERNAL_ERROR;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import static cn.howardliu.demo.spring.seh.exception.CommonResponseEnum.INTERNAL_ERROR;
+import cn.howardliu.demo.spring.seh.advice.CheckController;
+import cn.howardliu.demo.spring.seh.exception.CodeBaseException;
+import cn.howardliu.demo.spring.seh.exception.CommonResponseEnum;
+import cn.howardliu.demo.spring.seh.pojo.Response;
+import cn.howardliu.demo.spring.seh.service.IndexService;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * <br>created at 2020/8/24
@@ -46,7 +48,23 @@ public class IndexController {
     }
 
     @GetMapping("hello2")
+    @CheckController
     public Response<String> hello2(@RequestParam("ex") String ex) {
+        switch (ex) {
+            case "ex1":
+                throw new CodeBaseException(CommonResponseEnum.USER_NOT_FOUND, "用户信息不存在");
+            case "ex2":
+                throw new CodeBaseException(CommonResponseEnum.MENU_NOT_FOUND, "菜单信息不存在");
+            case "ex3":
+                throw new CodeBaseException(CommonResponseEnum.ILLEGAL_ARGUMENT, "请求参数异常");
+            case "ex4":
+                throw new CodeBaseException(CommonResponseEnum.DATA_NOT_FOUND, "数据不存在");
+        }
+        throw new CodeBaseException(INTERNAL_ERROR, new Object[]{ex}, "请求异常", new RuntimeException("运行时异常信息"));
+    }
+
+    @GetMapping("hello3")
+    public Response<String> hello3(@RequestParam("ex") String ex) {
         switch (ex) {
             case "ex1":
                 throw new CodeBaseException(CommonResponseEnum.USER_NOT_FOUND, "用户信息不存在");
