@@ -16,6 +16,7 @@
         <module>spring-filter</module>
         <module>springboot-junit5-mockito</module>
         <module>springboot-swagger3</module>
+        <module>springboot-messages</module>
     </modules>
 
     <packaging>pom</packaging>

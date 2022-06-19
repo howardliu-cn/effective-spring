@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: springboot-messages
+  messages:
+    cache-duration: 60

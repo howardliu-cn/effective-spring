@@ -16,3 +16,7 @@
   - [SpringBoot 实战：JUnit5+MockMvc+Mockito 做好单元测试](https://www.howardliu.cn/springboot-action-junit5-mockmvc-mockito/)
 - springboot-swagger3 在SpringBoot中集成Swagger3
   - 更新中
+- springboot-messages：使用SpringBoot中的国际化组件
+  - [标准组件]()
+  - [自动重加载组件]()
+  - [扩展组件]()

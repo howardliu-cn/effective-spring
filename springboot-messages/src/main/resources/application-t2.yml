@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: springboot-messages
+  messages:
+    basename: t2_messages
+    use-code-as-default-message: true
+    encoding: utf-8
+    always-use-message-format: false
+    cache-duration: 60
+    fallback-to-system-locale: true
+  messages-type: ReloadableResourceBundleMessageSource

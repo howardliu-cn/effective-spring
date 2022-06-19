@@ -1,0 +1,28 @@
+### 默认
+GET http://localhost:8080/m1
+
+### local: en
+GET http://localhost:8080/m1
+Accept-Language: en
+
+### local: en-US
+GET http://localhost:8080/m1
+Accept-Language: en-US
+
+### local: zh
+GET http://localhost:8080/m1
+Accept-Language: zh
+
+### local: zh-CN
+GET http://localhost:8080/m1
+Accept-Language: zh-CN
+
+###
+GET http://localhost:8080/m2
+
+###
+GET http://localhost:8080/m3
+
+###
+GET http://localhost:8080/m3
+Accept-Language: en-US
