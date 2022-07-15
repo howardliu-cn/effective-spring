@@ -179,10 +179,14 @@ public class NacosBundleMessageSource extends AbstractResourceBasedMessageSource
                 return filenames;
             }
         }
+        // Filenames for given Locale
         List<String> filenames = new ArrayList<>(7);
         filenames.addAll(calculateFilenamesForLocale(basename, locale));
-        if (isFallbackToSystemLocale() && !locale.equals(Locale.getDefault())) {
-            List<String> fallbackFilenames = calculateFilenamesForLocale(basename, Locale.getDefault());
+
+        // Filenames for default Locale, if any
+        Locale defaultLocale = getDefaultLocale();
+        if (defaultLocale != null && !locale.equals(Locale.getDefault())) {
+            List<String> fallbackFilenames = calculateFilenamesForLocale(basename, defaultLocale);
             for (String fallbackFilename : fallbackFilenames) {
                 if (!filenames.contains(fallbackFilename)) {
                     // Entry for fallback locale that isn't already in filenames list.
@@ -338,7 +342,7 @@ public class NacosBundleMessageSource extends AbstractResourceBasedMessageSource
         final String dataId = filename + NacosConstants.PROPERTIES_SUFFIX;
         logger.info("Loading properties for " + dataId);
         final String config = nacosConfigManager.getConfigService().getConfig(dataId, nacosGroup, 5000);
-        if (StringUtils.isEmpty(config)) {
+        if (StringUtils.hasText(config)) {
             logger.info("No properties found for " + dataId);
             throw new NoSuchFileException(dataId);
         }
@@ -387,8 +391,8 @@ public class NacosBundleMessageSource extends AbstractResourceBasedMessageSource
             return;
         }
 
-        if (parentMessageSource instanceof NacosBundleMessageSource) {
-            ((NacosBundleMessageSource) parentMessageSource).clearCacheIncludingAncestors();
+        if (parentMessageSource instanceof NacosBundleMessageSource nacosBundleMessageSource) {
+            nacosBundleMessageSource.clearCacheIncludingAncestors();
         }
     }
 
