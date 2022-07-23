@@ -1,0 +1,132 @@
+@startuml
+participant Actor
+Actor -> NacosBundleMessageSourceRefresher : onApplicationEvent
+activate NacosBundleMessageSourceRefresher
+NacosBundleMessageSourceRefresher -> NacosBundleMessageSource : defaultLocales
+activate NacosBundleMessageSource
+NacosBundleMessageSource --> NacosBundleMessageSourceRefresher
+deactivate NacosBundleMessageSource
+NacosBundleMessageSourceRefresher -> NacosBundleMessageSource : getMergedProperties
+activate NacosBundleMessageSource
+NacosBundleMessageSource -> NacosBundleMessageSource : newProperties
+activate NacosBundleMessageSource
+NacosBundleMessageSource --> NacosBundleMessageSource
+deactivate NacosBundleMessageSource
+NacosBundleMessageSource -> NacosBundleMessageSource : calculateAllFilenames
+activate NacosBundleMessageSource
+NacosBundleMessageSource -> NacosBundleMessageSource : calculateFilenamesForLocale
+activate NacosBundleMessageSource
+NacosBundleMessageSource --> NacosBundleMessageSource
+deactivate NacosBundleMessageSource
+NacosBundleMessageSource -> NacosBundleMessageSource : calculateFilenamesForLocale
+activate NacosBundleMessageSource
+NacosBundleMessageSource --> NacosBundleMessageSource
+deactivate NacosBundleMessageSource
+NacosBundleMessageSource --> NacosBundleMessageSource
+deactivate NacosBundleMessageSource
+NacosBundleMessageSource -> NacosBundleMessageSource : getProperties
+activate NacosBundleMessageSource
+create PropertiesHolder
+NacosBundleMessageSource -> PropertiesHolder : new
+activate PropertiesHolder
+PropertiesHolder --> NacosBundleMessageSource
+deactivate PropertiesHolder
+NacosBundleMessageSource -> NacosBundleMessageSource : refreshProperties
+activate NacosBundleMessageSource
+NacosBundleMessageSource -> NacosBundleMessageSource : loadProperties
+activate NacosBundleMessageSource
+NacosBundleMessageSource -> NacosBundleMessageSource : newProperties
+activate NacosBundleMessageSource
+NacosBundleMessageSource --> NacosBundleMessageSource
+deactivate NacosBundleMessageSource
+NacosBundleMessageSource --> NacosBundleMessageSource
+deactivate NacosBundleMessageSource
+create PropertiesHolder
+NacosBundleMessageSource -> PropertiesHolder : new
+activate PropertiesHolder
+PropertiesHolder --> NacosBundleMessageSource
+deactivate PropertiesHolder
+create PropertiesHolder
+NacosBundleMessageSource -> PropertiesHolder : new
+activate PropertiesHolder
+PropertiesHolder --> NacosBundleMessageSource
+deactivate PropertiesHolder
+create PropertiesHolder
+NacosBundleMessageSource -> PropertiesHolder : new
+activate PropertiesHolder
+PropertiesHolder --> NacosBundleMessageSource
+deactivate PropertiesHolder
+NacosBundleMessageSource --> NacosBundleMessageSource
+deactivate NacosBundleMessageSource
+NacosBundleMessageSource --> NacosBundleMessageSource
+deactivate NacosBundleMessageSource
+create PropertiesHolder
+NacosBundleMessageSource -> PropertiesHolder : new
+activate PropertiesHolder
+PropertiesHolder --> NacosBundleMessageSource
+deactivate PropertiesHolder
+NacosBundleMessageSource --> NacosBundleMessageSourceRefresher
+deactivate NacosBundleMessageSource
+NacosBundleMessageSourceRefresher -> NacosBundleMessageSourceRefresher : registerNacosListenersForApplications
+activate NacosBundleMessageSourceRefresher
+NacosBundleMessageSourceRefresher -> NacosBundleMessageSourceRefresher : λ→
+activate NacosBundleMessageSourceRefresher
+NacosBundleMessageSourceRefresher -> NacosBundleMessageSource : defaultLocales
+activate NacosBundleMessageSource
+NacosBundleMessageSource --> NacosBundleMessageSourceRefresher
+deactivate NacosBundleMessageSource
+NacosBundleMessageSourceRefresher -> NacosBundleMessageSourceRefresher : λ→
+activate NacosBundleMessageSourceRefresher
+NacosBundleMessageSourceRefresher -> NacosBundleMessageSource : calculateAllFilenames
+activate NacosBundleMessageSource
+NacosBundleMessageSource -> NacosBundleMessageSource : calculateFilenamesForLocale
+activate NacosBundleMessageSource
+NacosBundleMessageSource --> NacosBundleMessageSource
+deactivate NacosBundleMessageSource
+NacosBundleMessageSource -> NacosBundleMessageSource : calculateFilenamesForLocale
+activate NacosBundleMessageSource
+NacosBundleMessageSource --> NacosBundleMessageSource
+deactivate NacosBundleMessageSource
+NacosBundleMessageSource --> NacosBundleMessageSourceRefresher
+deactivate NacosBundleMessageSource
+NacosBundleMessageSourceRefresher --> NacosBundleMessageSourceRefresher
+deactivate NacosBundleMessageSourceRefresher
+NacosBundleMessageSourceRefresher --> NacosBundleMessageSourceRefresher
+deactivate NacosBundleMessageSourceRefresher
+NacosBundleMessageSourceRefresher -> NacosBundleMessageSourceRefresher : λ→
+activate NacosBundleMessageSourceRefresher
+NacosBundleMessageSourceRefresher -> NacosBundleMessageSourceRefresher : registerNacosListener
+activate NacosBundleMessageSourceRefresher
+NacosBundleMessageSourceRefresher -> NacosBundleMessageSourceRefresher : λ→
+activate NacosBundleMessageSourceRefresher
+NacosBundleMessageSourceRefresher -> Anonymous : innerReceive
+activate Anonymous
+Anonymous -> NacosBundleMessageSourceRefresher : refreshCountIncrement
+activate NacosBundleMessageSourceRefresher
+NacosBundleMessageSourceRefresher --> Anonymous
+deactivate NacosBundleMessageSourceRefresher
+Anonymous -> NacosBundleMessageSource : forceRefresh
+activate NacosBundleMessageSource
+NacosBundleMessageSource -> NacosBundleMessageSource : newProperties
+activate NacosBundleMessageSource
+NacosBundleMessageSource --> NacosBundleMessageSource
+deactivate NacosBundleMessageSource
+create PropertiesHolder
+NacosBundleMessageSource -> PropertiesHolder : new
+activate PropertiesHolder
+PropertiesHolder --> NacosBundleMessageSource
+deactivate PropertiesHolder
+NacosBundleMessageSource --> Anonymous
+deactivate NacosBundleMessageSource
+Anonymous --> NacosBundleMessageSourceRefresher
+deactivate Anonymous
+NacosBundleMessageSourceRefresher --> NacosBundleMessageSourceRefresher
+deactivate NacosBundleMessageSourceRefresher
+NacosBundleMessageSourceRefresher --> NacosBundleMessageSourceRefresher
+deactivate NacosBundleMessageSourceRefresher
+NacosBundleMessageSourceRefresher --> NacosBundleMessageSourceRefresher
+deactivate NacosBundleMessageSourceRefresher
+NacosBundleMessageSourceRefresher --> NacosBundleMessageSourceRefresher
+deactivate NacosBundleMessageSourceRefresher
+return
+@enduml
