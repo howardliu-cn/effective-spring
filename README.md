@@ -4,11 +4,11 @@
   - [SpringBoot 实战：一招实现结果的优雅响应](https://www.howardliu.cn/springboot-action-gracefully-response/)
   - [SpringBoot 实战：如何优雅的处理异常](https://www.howardliu.cn/springboot-action-gracefully-response-exception/)
 - spring-beanpostprocessor: 借助BeanPostProcessor实现ID生成器的自动注入
-  - [Spring 实战：通过 BeanPostProcessor 动态注入 ID 生成器](https://www.howardliu.cn/spring-beanpostprocessor/)
+  - [SpringBoot 实战：通过 BeanPostProcessor 动态注入 ID 生成器](https://www.howardliu.cn/spring-beanpostprocessor/)
 - spring-filter: 自定义Filter
-  - [Spring 实战：自定义 Filter 优雅获取请求参数和响应结果](https://www.howardliu.cn/spring-request-recorder/)
+  - [SpringBoot 实战：自定义 Filter 优雅获取请求参数和响应结果](https://www.howardliu.cn/spring-request-recorder/)
 - spring-enum-param: 解析枚举参数
-  - [Spring 实战：优雅的使用枚举参数](https://www.howardliu.cn/spring-enum-params/)
+  - [SpringBoot 实战：优雅的使用枚举参数](https://www.howardliu.cn/spring-enum-params/)
   - [SpringBoot 实战：优雅的使用枚举参数（原理篇）](https://www.howardliu.cn/springboot-enum-params-principle/)
   - [SpringBoot 实战：在 RequestBody 中优雅的使用枚举参数](https://www.howardliu.cn/springboot-action-enum-params-in-requestbody/)
   - [SpringBoot 实战：在 RequestBody 中优雅的使用枚举参数（原理篇）](https://www.howardliu.cn/springboot-enum-params-principle/)
@@ -17,6 +17,6 @@
 - springboot-swagger3 在SpringBoot中集成Swagger3
   - 更新中
 - springboot-messages：使用SpringBoot中的国际化组件
-  - [标准组件]()
-  - [自动重加载组件]()
-  - [扩展组件]()
+  - [SpringBoot 实战：国际化组件 MessageSource](https://howardliu.cn/springboot-action-messagesource/)
+  - [SpringBoot 实战：国际化组件 MessageSource 的执行逻辑与源码](https://howardliu.cn/springboot-action-messagesource-principle/)
+  - [SpringBoot 实战：国际化组件 MessageSource 与 Nacos 组合实现动态配置能力](https://howardliu.cn/springboot-action-messagesource-nacos/)
