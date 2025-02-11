@@ -1,0 +1,3 @@
+langchain4j.open-ai.chat-model:
+  api-key: demo
+  model-name: gpt-4o-mini

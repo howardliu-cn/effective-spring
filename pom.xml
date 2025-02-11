@@ -20,6 +20,7 @@
         <module>springboot-exception</module>
         <module>springboot3-exception</module>
         <module>springboot3-validation</module>
+        <module>spring-statemachine</module>
     </modules>
 
     <packaging>pom</packaging>
